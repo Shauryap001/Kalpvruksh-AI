@@ -92,13 +92,55 @@ footer { padding-top: 40px; padding-bottom: 40px; }
 }
 
 /* Responsive tweaks for small screens */
-@media (max-width: 767px) {
-  section, footer, .pain, .lead, #pricing, #chatbot, #bot-deep, #hiw, .pain-section {
-    padding-top: 36px;
-    padding-bottom: 36px;
-  }
-  .hero { padding-top: 80px; padding-bottom: 40px; }
-  .grid, .pricing-grid { gap: 18px; }
+@media (max-width: 1024px) {
+  .wrapper { max-width: 96vw; }
+  .hero-img img { width: 90vw; height: auto; }
+  .pricing-grid, .grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+}
+@media (max-width: 900px) {
+  .hero-flex { flex-direction: column; text-align: center; gap: 24px; }
+  .hero-img img { width: 95vw; height: auto; }
+  .hero-text { max-width: 100%; }
+  .tabs { gap: 8px; }
+  .tab-btn { padding: 10px; }
+  .pricing-card { padding: 22px; }
+}
+@media (max-width: 768px) {
+  header .wrapper { flex-direction: column; align-items: stretch; height: auto; padding: 10px 1rem; gap: 8px; }
+  nav ul { flex-wrap: nowrap; overflow-x: auto; gap: 12px; padding: 6px 0; -webkit-overflow-scrolling: touch; }
+  nav ul::-webkit-scrollbar { display: none; }
+  .hero { padding: 60px 0 30px; }
+  .hero-flex { gap: 14px; }
+  .hero-img { order: 2; }
+  .hero-text { order: 1; }
+  .hero-img img { width: 98vw; height: auto; max-width: 700px; }
+  .btn { width: 100%; max-width: 520px; margin: 0 auto; display: block; }
+  .btn-outline, .btn-primary { padding: 12px 18px; }
+  .grid, .pricing-grid { grid-template-columns: 1fr; }
+  .card { padding: 14px; }
+  .pain-box { padding: 16px; }
+  .slider-wrap { max-height: 180px; }
+  .hero-decor { display: none; }
+  .tab-panel.active { flex-direction: column; }
+  .wrapper { padding: 0 0.5rem; }
+}
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .wrapper { padding: 0 0.3rem; }
+  .hero { padding: 40px 0 18px; }
+  .hero h1 { font-size: clamp(1.2rem,8vw,1.7rem); }
+  .tab-btn { flex: 1 1 100px; padding: 8px; font-size: .92rem; }
+  .lead form { gap: 8px; }
+  .lead input { padding: 8px; }
+  .pricing-card { padding: 10px; }
+  .interactive-card { padding: 10px; }
+  .btn { padding: 10px 10px; }
+  .pain-section { padding: 1.5rem 0.2rem; }
+}
+@media (max-width: 400px) {
+  .hero h1 { font-size: 1.1rem; }
+  .tab-btn { font-size: .85rem; }
+  .btn { font-size: .95rem; }
 }
 
 /* --- END SPACING DEBUG/FIXES --- */
@@ -375,7 +417,7 @@ canvas#bg-canvas { image-rendering: optimizeQuality; }
 <header>
   <div class="wrapper">
     <div style="display:flex;align-items:center;gap:8px;font-weight:700">
-      <img src="logo.png" alt="Kalpvruksh AI" style="width:36px">Kalpvruksh AI
+      <img src="WhatsApp Image 2025-08-20 at 18.09.23_47dfe0a0.jpg" alt="Kalpvruksh AI" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">Kalpvruksh AI
     </div>
 
     <!-- mobile menu button (visible only on small screens) -->
@@ -590,7 +632,7 @@ canvas#bg-canvas { image-rendering: optimizeQuality; }
       </ul>
       <button id="chatbot-cta" class="btn btn-primary" style="background:var(--accent)">Join Chatbot Waitlist</button>
     </div>
-    <div><img src="chatbot-mock.gif" alt="AI chatbot mock-up" loading="lazy"
+    <div><img src="chat-bot-img-4.png" alt="AI chatbot UI" loading="lazy"
               style="border-radius:12px;box-shadow:var(--shadow);max-height:360px"></div>
   </div>
 </section>
